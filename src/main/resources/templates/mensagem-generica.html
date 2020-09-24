@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+        <h4 th:text="${erro.getTitulo()}"></h4>
+    </div>
+    <div class="card-body">
+        <div>
+            <h4 th:text="${erro.getDescricao()}"></h4>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a th:endpoint="${erro.getLink()}" class="btn btn-primary text-white" th:text="${erro.getRotuloBotao()}"><i class="icon-undo2"></i>&nbsp;</a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="card shadow">
+    <div class="card-header">
+        <span class="h2 text-primary">Lista de clientes</span><br>
+
+    </div>
+    <div class="card-body row">
+        <div class="card col-3 mb-2 mx-auto" th:each="cliente : ${listaClientes}">
+            <div class="card-body">
+                <span th:text="${'Nome: '+cliente.nome}"></span><br>
+                <span th:text="${'Email: '+cliente.email}"></span><br>
+            </div>
+            <div class="mb-3 mx-auto">
+                <a th:endpoint="${'editar-cliente/'+cliente.id}" href="javascript:void();"><i class="text-primary fa fa-user-edit"></i></a>
+            </div>
+        </div>
+
+        <div class="card col-3 mx-auto">
+            <div class="card-body text-center">
+                <h4>Adicionar novo cliente</h4>
+                <a endpoint="adicionar-cliente" class="btn btn-user btn-success text-white"><i class="fa fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
